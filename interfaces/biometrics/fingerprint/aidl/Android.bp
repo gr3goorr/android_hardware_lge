@@ -1,0 +1,16 @@
+aidl_interface {
+    name: "vendor.lge.hardware.biometrics.fingerprint-V1-aidl",
+    owner: "lineage",
+    vendor: true,
+    srcs: [
+        "vendor/lge/hardware/biometrics/fingerprint/FingerCmdLge.aidl",
+        "vendor/lge/hardware/biometrics/fingerprint/ILgeFingerprintExtension.aidl",
+    ],
+
+    stability: "vintf",
+    backend: {
+        ndk: {
+            enabled: true,
+        },
+    },
+}
