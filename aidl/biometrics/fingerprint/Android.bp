@@ -1,3 +1,4 @@
+
 soong_config_module_type {
     name: "lge_fingerprint_service_cc_defaults",
     module_type: "cc_defaults",
@@ -16,31 +17,32 @@ lge_fingerprint_service_cc_defaults {
 }
 
 cc_binary {
-    name: "android.hardware.biometrics.fingerprint@2.3-service.lge",
+    name: "android.hardware.biometrics.fingerprint-service.lge",
     defaults: [
-        "hidl_defaults",
-        "lge_fingerprint_service_defaults"
+        "lge_fingerprint_service_defaults",
     ],
-    init_rc: ["android.hardware.biometrics.fingerprint@2.3-service.lge.rc"],
-    vintf_fragments: ["android.hardware.biometrics.fingerprint@2.3-service.lge.xml"],
+    init_rc: ["android.hardware.biometrics.fingerprint-service.lge.rc"],
+    vintf_fragments: ["android.hardware.biometrics.fingerprint-service.lge.xml"],
     vendor: true,
     relative_install_path: "hw",
-
     srcs: [
-        "BiometricsFingerprint.cpp",
         "service.cpp",
+        "Fingerprint.cpp",
+        "Session.cpp",
     ],
-
     shared_libs: [
         "libbase",
+        "libbinder_ndk",
         "libcutils",
         "liblog",
-        "libhidlbase",
         "libhardware",
         "libutils",
-        "android.hardware.biometrics.fingerprint@2.1",
-        "android.hardware.biometrics.fingerprint@2.2",
-        "android.hardware.biometrics.fingerprint@2.3",
+        "android.hardware.biometrics.fingerprint-V1-ndk",
+        "vendor.lge.hardware.biometrics.fingerprint-V1-aidl-V1-ndk",
     ],
-
+    cflags: [
+        "-Wall",
+        "-Werror",
+        "-Wno-unused-parameter",
+    ],
 }

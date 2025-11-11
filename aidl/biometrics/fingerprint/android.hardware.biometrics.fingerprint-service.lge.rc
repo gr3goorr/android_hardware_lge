@@ -1,0 +1,8 @@
+on boot
+    chmod 664 /sys/devices/virtual/input/lge_touch/reset_ctrl
+    chown system system /sys/devices/virtual/input/lge_touch/reset_ctrl
+
+service vendor.fps_hal /vendor/bin/hw/android.hardware.biometrics.fingerprint-service.lge
+    class late_start
+    user system
+    group system input uhid
