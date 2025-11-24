@@ -25,9 +25,10 @@
     <string name="cf_shape_1">Pomalé překlopení</string>
     <string name="cf_shape_2">Minimální fáze s rychlým překlopením</string>
     <string name="cf_shape_3">Minimální fáze s pomalým překlopením</string>
-    <string name="cf_shape_4">Apodizační rychlé překlopení</string>
-    <string name="cf_shape_5">Hybridní rychlé překlopení</string>
-    <string name="cf_shape_6">Cihlová zeď</string>
+    <string name="cf_shape_4">Apodizační rychlé překlopení 1</string>
+    <string name="cf_shape_5">Apodizační rychlé překlopení 2</string>
+    <string name="cf_shape_6">Hybridní rychlé překlopení</string>
+    <string name="cf_shape_7">Cihlová zeď</string>
     <string name="cf_symmetry">Symetrie vlastního filtru</string>
     <string name="cf_symmetry_0">Sinusová symetrie</string>
     <string name="cf_symmetry_1">Kosinusová symetrie</string>

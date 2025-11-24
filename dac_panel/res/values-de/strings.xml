@@ -25,9 +25,10 @@
     <string name="cf_shape_1">Slow Roll-Off</string>
     <string name="cf_shape_2">Minimum Phase Fast Roll-Off</string>
     <string name="cf_shape_3">Minimum Phase Slow Roll-Off</string>
-    <string name="cf_shape_4">Apodizing Fast Roll-Off</string>
-    <string name="cf_shape_5">Hybrid Fast Roll-Off</string>
-    <string name="cf_shape_6">Brick wall</string>
+    <string name="cf_shape_4">Apodizing Fast Roll-Off 1</string>
+    <string name="cf_shape_5">Apodizing Fast Roll-Off 2</string>
+    <string name="cf_shape_6">Hybrid Fast Roll-Off</string>
+    <string name="cf_shape_7">Brick wall</string>
     <string name="cf_symmetry">Benutzerdefinierte Filtersymmetrie</string>
     <string name="cf_symmetry_0">Sinussymmetrie</string>
     <string name="cf_symmetry_1">Kosinussymmetrie</string>
