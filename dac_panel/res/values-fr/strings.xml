@@ -25,9 +25,10 @@
     <string name="cf_shape_1">Décroissance lente</string>
     <string name="cf_shape_2">Phase minimum à décroissance rapide</string>
     <string name="cf_shape_3">Phase minimum à décroissance lente</string>
-    <string name="cf_shape_4">Fenêtrage à décroissance rapide</string>
-    <string name="cf_shape_5">Décroissance rapide hybride</string>
-    <string name="cf_shape_6">Rectangulaire</string>
+    <string name="cf_shape_4">Fenêtrage à décroissance rapide 1</string>
+    <string name="cf_shape_5">Fenêtrage à décroissance rapide 2</string>
+    <string name="cf_shape_6">Décroissance rapide hybride</string>
+    <string name="cf_shape_7">Rectangulaire</string>
     <string name="cf_symmetry">Symétrie du filtre personnalisé</string>
     <string name="cf_symmetry_0">Symétrie sinusoïdale</string>
     <string name="cf_symmetry_1">Symétrie cosinusoïdale</string>

@@ -25,9 +25,10 @@
     <string name="cf_shape_1">رول کردن کند</string>
     <string name="cf_shape_2">فاز حداقل رول کردن سریع</string>
     <string name="cf_shape_3">فاز حداقل رول کردن کند</string>
-    <string name="cf_shape_4">رول کردن سریع آپادیز کردن</string>
-    <string name="cf_shape_5">رول کردن سریع هیبریدی</string>
-    <string name="cf_shape_6">دیوار آجری</string>
+    <string name="cf_shape_4">رول کردن سریع آپادیز کردن 1</string>
+    <string name="cf_shape_5">رول کردن سریع آپادیز کردن 2</string>
+    <string name="cf_shape_6">رول کردن سریع هیبریدی</string>
+    <string name="cf_shape_7">دیوار آجری</string>
     <string name="cf_symmetry">تقارن فیلتر سفارشی</string>
     <string name="cf_symmetry_0">تقارن سینوسی</string>
     <string name="cf_symmetry_1">تقارن کسینوس</string>

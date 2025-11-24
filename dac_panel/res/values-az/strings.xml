@@ -25,9 +25,10 @@
     <string name="cf_shape_1">Yavaş roll-off</string>
     <string name="cf_shape_2">Minimum faza sürətli roll-off</string>
     <string name="cf_shape_3">Minimum faza yavaş roll-off</string>
-    <string name="cf_shape_4">Apodizasiya sürətli roll-off 2</string>
-    <string name="cf_shape_5">Hibrid sürətli roll-off</string>
-    <string name="cf_shape_6">Brick wall</string>
+    <string name="cf_shape_4">Apodizasiya sürətli roll-off 1</string>
+    <string name="cf_shape_5">Apodizasiya sürətli roll-off 2</string>
+    <string name="cf_shape_6">Hibrid sürətli roll-off</string>
+    <string name="cf_shape_7">Brick wall</string>
     <string name="cf_symmetry">Özəl filtr simmetriyası</string>
     <string name="cf_symmetry_0">Sinus simmetriyası</string>
     <string name="cf_symmetry_1">Kosinus simmetriyası</string>

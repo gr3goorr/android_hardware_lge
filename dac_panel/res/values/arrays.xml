@@ -28,8 +28,9 @@
         <item>@string/cf_shape_2</item>
         <item>@string/cf_shape_3</item>
         <item>@string/cf_shape_4</item>
-        <item>@string/cf_shape_5</item> <!-- This one is treated as "6" by es9218 -->
-        <item>@string/cf_shape_6</item> <!-- And this one becomes "7" due to that -->
+        <item>@string/cf_shape_5</item> 
+        <item>@string/cf_shape_6</item> 
+        <item>@string/cf_shape_7</item>
     </string-array>
 
     <string-array name="custom_filter_symmetries" translatable="false">

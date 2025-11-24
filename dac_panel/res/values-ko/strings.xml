@@ -25,9 +25,10 @@
     <string name="cf_shape_1">느린 롤 오프</string>
     <string name="cf_shape_2">미니멈 페이즈 빠른 롤 오프</string>
     <string name="cf_shape_3">미니멈 페이즈 느린 롤 오프</string>
-    <string name="cf_shape_4">아포다이징 빠른 롤 오프</string>
-    <string name="cf_shape_5">하이브리드 빠른 롤 오프</string>
-    <string name="cf_shape_6">벽돌 벽</string>
+    <string name="cf_shape_4">아포다이징 빠른 롤 오프 1</string>
+    <string name="cf_shape_5">아포다이징 빠른 롤 오프 2</string>
+    <string name="cf_shape_6">하이브리드 빠른 롤 오프</string>
+    <string name="cf_shape_7">벽돌 벽</string>
     <string name="hifi_mode">HiFi 모드</string>
     <string name="hifi_mode_normal">기본</string>
     <string name="hifi_mode_him">높은 임피던스</string>

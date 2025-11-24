@@ -25,9 +25,10 @@
     <string name="cf_shape_1">Langzame roll-off</string>
     <string name="cf_shape_2">Minimale fase snelle roll-off</string>
     <string name="cf_shape_3">Minimale fase langzame roll-off</string>
-    <string name="cf_shape_4">Apodiserende snelle roll-off </string>
-    <string name="cf_shape_5">Hybride snelle roll-off</string>
-    <string name="cf_shape_6">Stenen Muur</string>
+    <string name="cf_shape_4">Apodiserende snelle roll-off 1</string>
+    <string name="cf_shape_5">Apodiserende snelle roll-off 2</string>
+    <string name="cf_shape_6">Hybride snelle roll-off</string>
+    <string name="cf_shape_7">Stenen Muur</string>
     <string name="cf_symmetry">Aangepaste filter symmetrie</string>
     <string name="cf_symmetry_0">Sinus symmetrie</string>
     <string name="cf_symmetry_1">Cosinus symmetrie</string>

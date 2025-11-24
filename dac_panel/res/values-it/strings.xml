@@ -25,9 +25,10 @@
     <string name="cf_shape_1">Bassa attenuazione</string>
     <string name="cf_shape_2">Fase minima, alta attenuazione</string>
     <string name="cf_shape_3">Fase minima, bassa attenuazione</string>
-    <string name="cf_shape_4">Apodizzante ad alta attenuazione</string>
-    <string name="cf_shape_5">Ibrido, alta attenuazione</string>
-    <string name="cf_shape_6">Filtro rettangolare ideale</string>
+    <string name="cf_shape_4">Apodizzante ad alta attenuazione 1</string>
+    <string name="cf_shape_5">Apodizzante ad alta attenuazione 2</string>
+    <string name="cf_shape_6">Ibrido, alta attenuazione</string>
+    <string name="cf_shape_7">Filtro rettangolare ideale</string>
     <string name="cf_symmetry">Simmetria filtro personalizzabile</string>
     <string name="cf_symmetry_0">Simmetria seno</string>
     <string name="cf_symmetry_1">Simmetria coseno</string>

@@ -25,9 +25,10 @@
     <string name="cf_shape_1">Бавно разгъване</string>
     <string name="cf_shape_2">Бързо разгъване с минимална фаза</string>
     <string name="cf_shape_3">Бавно разгъване с минимална фаза</string>
-    <string name="cf_shape_4">Аподизиращо бързо разгъване</string>
-    <string name="cf_shape_5">Хибридно бързо разгъване</string>
-    <string name="cf_shape_6">Тухлена стена</string>
+    <string name="cf_shape_4">Аподизиращо бързо разгъване 1</string>
+    <string name="cf_shape_5">Аподизиращо бързо разгъване 2</string>
+    <string name="cf_shape_6">Хибридно бързо разгъване</string>
+    <string name="cf_shape_7">Тухлена стена</string>
     <string name="cf_symmetry">Симетрия на персоналния филтър</string>
     <string name="cf_symmetry_0">Синусова симетрия</string>
     <string name="cf_symmetry_1">Косинусова симетрия</string>

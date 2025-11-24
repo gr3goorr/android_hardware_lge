@@ -25,9 +25,10 @@
     <string name="cf_shape_1">ნელა მილევა</string>
     <string name="cf_shape_2">უმცირესი ფაზის სწრაფი მილევა</string>
     <string name="cf_shape_3">უმცირესი ფაზის ნელი მილევა</string>
-    <string name="cf_shape_4">აპოდიზაცია სწრაფი მილევით</string>
-    <string name="cf_shape_5">შერეული სახის სწრაფი მილევა</string>
-    <string name="cf_shape_6">აგურის კედელი</string>
+    <string name="cf_shape_4">აპოდიზაცია სწრაფი მილევით 1</string>
+    <string name="cf_shape_5">აპოდიზაცია სწრაფი მილევით 2</string>
+    <string name="cf_shape_6">შერეული სახის სწრაფი მილევა</string>
+    <string name="cf_shape_7">აგურის კედელი</string>
     <string name="cf_symmetry">მორგებული ფილტრის თანაზომიერება</string>
     <string name="cf_symmetry_0">სიმეტრიული სინუსი</string>
     <string name="cf_symmetry_1">სიმეტრიული კოსინუსი</string>

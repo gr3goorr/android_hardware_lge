@@ -25,9 +25,10 @@
     <string name="cf_shape_1">Declíneo lento</string>
     <string name="cf_shape_2">Declínio rápido de fase linear mínimo</string>
     <string name="cf_shape_3">Declínio lento de fase linear mínimo</string>
-    <string name="cf_shape_4">Apodização rápida de declínio</string>
-    <string name="cf_shape_5">Declínio rápido híbrido</string>
-    <string name="cf_shape_6">Parede de tijolos</string>
+    <string name="cf_shape_4">Apodização rápida de declínio 1</string>
+    <string name="cf_shape_5">Apodização rápida de declínio 2</string>
+    <string name="cf_shape_6">Declínio rápido híbrido</string>
+    <string name="cf_shape_7">Parede de tijolos</string>
     <string name="cf_symmetry">Simetria do filtro personalizado</string>
     <string name="cf_symmetry_0">Simetria do Seno</string>
     <string name="cf_symmetry_1">Simetria do Cosseno</string>

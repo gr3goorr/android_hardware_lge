@@ -25,9 +25,10 @@
     <string name="cf_shape_1">Basse atenuazion</string>
     <string name="cf_shape_2">Fase minime, alte atenuazion</string>
     <string name="cf_shape_3">Fase minime, basse atenuazion</string>
-    <string name="cf_shape_4">Taiât da pîts, alte atenuazion</string>
-    <string name="cf_shape_5">Ibrit, alte atenuazion</string>
-    <string name="cf_shape_6">Mûr di modons</string>
+    <string name="cf_shape_4">Taiât da pîts, alte atenuazion 1</string>
+    <string name="cf_shape_5">Taiât da pîts, alte atenuazion 2</string>
+    <string name="cf_shape_6">Ibrit, alte atenuazion</string>
+    <string name="cf_shape_7">Mûr di modons</string>
     <string name="cf_symmetry">Simetrie filtri personalizade</string>
     <string name="cf_symmetry_0">Simetrie sen</string>
     <string name="cf_symmetry_1">Simetrie cosen</string>

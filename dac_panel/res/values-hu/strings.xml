@@ -25,9 +25,10 @@
     <string name="cf_shape_1">Lassú legördülés</string>
     <string name="cf_shape_2">Minimális fázisú hirtelen meredekség</string>
     <string name="cf_shape_3">Minimális fázisú visszafogott meredekség</string>
-    <string name="cf_shape_4">Apodizáló hirtelen meredekség</string>
-    <string name="cf_shape_5">Vegyes (hybrid) hirtelen meredekség</string>
-    <string name="cf_shape_6">Téglafal</string>
+    <string name="cf_shape_4">Apodizáló hirtelen meredekség 1</string>
+    <string name="cf_shape_5">Apodizáló hirtelen meredekség 2</string>
+    <string name="cf_shape_6">Vegyes (hybrid) hirtelen meredekség</string>
+    <string name="cf_shape_7">Téglafal</string>
     <string name="cf_symmetry">Egyéni szűrőszimmetria</string>
     <string name="cf_symmetry_0">Szinuszos</string>
     <string name="cf_symmetry_1">Koszinuszos</string>

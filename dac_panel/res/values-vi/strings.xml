@@ -25,9 +25,10 @@
     <string name="cf_shape_1">Suy giảm tần số chậm</string>
     <string name="cf_shape_2">Pha tối thiểu suy giảm tần số nhanh</string>
     <string name="cf_shape_3">Pha tối thiểu suy giảm tần số chậm</string>
-    <string name="cf_shape_4">Cắt nhanh Apodization</string>
-    <string name="cf_shape_5">Suy giảm tần số nhanh Hybrid</string>
-    <string name="cf_shape_6">Bức tường gạch</string>
+    <string name="cf_shape_4">Cắt nhanh Apodization 1</string>
+    <string name="cf_shape_5">Cắt nhanh Apodization 2</string>
+    <string name="cf_shape_6">Suy giảm tần số nhanh Hybrid</string>
+    <string name="cf_shape_7">Bức tường gạch</string>
     <string name="cf_symmetry">Tùy chỉnh Bộ lọc Đối xứng</string>
     <string name="cf_symmetry_0">Đối xứng Sin</string>
     <string name="cf_symmetry_1">Đối xứng Cosin</string>

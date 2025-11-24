@@ -25,9 +25,10 @@
     <string name="cf_shape_1">ئاستا دومىلىتىش</string>
     <string name="cf_shape_2">ئەڭ ئاز نىسپىي تېز دومىلىتىش</string>
     <string name="cf_shape_3">ئەڭ ئاز نىسپىي ئاستا دومىلىتىش</string>
-    <string name="cf_shape_4">سۈرئەت ئۆزگەرتىپ تېز دومىلىتىش</string>
-    <string name="cf_shape_5">ئارىلاش تېز دومىلىتىش</string>
-    <string name="cf_shape_6">خىش تام</string>
+    <string name="cf_shape_4">سۈرئەت ئۆزگەرتىپ تېز دومىلىتىش 1</string>
+    <string name="cf_shape_5">سۈرئەت ئۆزگەرتىپ تېز دومىلىتىش 2</string>
+    <string name="cf_shape_6">ئارىلاش تېز دومىلىتىش</string>
+    <string name="cf_shape_7">خىش تام</string>
     <string name="cf_symmetry">ئىختىيارى سۈزگۈچ سىممېتىرىكلىكى</string>
     <string name="cf_symmetry_0">سىنوس سىممېتىرىكلىكى</string>
     <string name="cf_symmetry_1">كوسىنوس سىممېتىرىكلىكى</string>
