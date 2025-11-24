@@ -25,9 +25,10 @@
     <string name="cf_shape_1">Roll-off încet</string>
     <string name="cf_shape_2">Roll-off rapid fază minimă</string>
     <string name="cf_shape_3">Roll-off încet fază minimă</string>
-    <string name="cf_shape_4">Apodizing fast roll-off</string>
-    <string name="cf_shape_5">Roll-off rapid hibrid</string>
-    <string name="cf_shape_6">Perete de cărămidă</string>
+    <string name="cf_shape_4">Apodizing fast roll-off 1</string>
+    <string name="cf_shape_5">Apodizing fast roll-off 2</string>
+    <string name="cf_shape_6">Roll-off rapid hibrid</string>
+    <string name="cf_shape_7">Perete de cărămidă</string>
     <string name="cf_symmetry">Simetrie Filtru Personalizabil</string>
     <string name="cf_symmetry_0">Simetrie Sinus</string>
     <string name="cf_symmetry_1">Simetrie Cosinus</string>

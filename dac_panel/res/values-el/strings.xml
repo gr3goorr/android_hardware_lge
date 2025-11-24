@@ -25,9 +25,10 @@
     <string name="cf_shape_1">Αργή κύλιση</string>
     <string name="cf_shape_2">Ελάχιστη φάση ταχείας κύλισης</string>
     <string name="cf_shape_3">Ελάχιστη φάση αργής κύλισης</string>
-    <string name="cf_shape_4">Αποδοτική ταχεία κύλιση</string>
-    <string name="cf_shape_5">Υβριδική ταχεία κύλιση</string>
-    <string name="cf_shape_6">Τοίχος από τούβλα</string>
+    <string name="cf_shape_4">Αποδοτική ταχεία κύλιση 1</string>
+    <string name="cf_shape_5">Αποδοτική ταχεία κύλιση 2</string>
+    <string name="cf_shape_6">Υβριδική ταχεία κύλιση</string>
+    <string name="cf_shape_7">Τοίχος από τούβλα</string>
     <string name="cf_symmetry">Συμμετρία προσαρμοσμένου φίλτρου</string>
     <string name="cf_symmetry_0">Ημίτονη συμμετρία</string>
     <string name="cf_symmetry_1">Συνημίτονη συμμετρία</string>

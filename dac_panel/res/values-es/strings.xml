@@ -25,9 +25,10 @@
     <string name="cf_shape_1">Reducción lenta</string>
     <string name="cf_shape_2"> Fase mínima de reducción rápida</string>
     <string name="cf_shape_3">Fase mínima de reducción lenta</string>
-    <string name="cf_shape_4">Apodización de reducción rápida</string>
-    <string name="cf_shape_5">Reducción rápida híbrida</string>
-    <string name="cf_shape_6">Pared de ladrillo</string>
+    <string name="cf_shape_4">Apodización de reducción rápida 1</string>
+    <string name="cf_shape_5">Apodización de reducción rápida 2</string>
+    <string name="cf_shape_6">Reducción rápida híbrida</string>
+    <string name="cf_shape_7">Pared de ladrillo</string>
     <string name="cf_symmetry">Simetría, filtro personalizado</string>
     <string name="cf_symmetry_0">Simetría senoidal</string>
     <string name="cf_symmetry_1">Simetría cosenoidal</string>

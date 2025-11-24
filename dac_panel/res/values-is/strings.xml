@@ -24,9 +24,10 @@
     <string name="cf_shape_1">Hæg afrúnnun</string>
     <string name="cf_shape_2">Hröð afrúnnun lágmarksfasa</string>
     <string name="cf_shape_3">Hæg afrúnnun lágmarksfasa</string>
-    <string name="cf_shape_4">Afmörkuð (apodizing) hröð afrúnnun</string>
-    <string name="cf_shape_5">Blönduð hröð afrúnnun</string>
-    <string name="cf_shape_6">Múrsteinsveggur</string>
+    <string name="cf_shape_4">Afmörkuð (apodizing) hröð afrúnnun 1</string>
+    <string name="cf_shape_5">Afmörkuð (apodizing) hröð afrúnnun 2</string>
+    <string name="cf_shape_6">Blönduð hröð afrúnnun</string>
+    <string name="cf_shape_7">Múrsteinsveggur</string>
     <string name="cf_symmetry">Samhverfa sérsniðinnar síu</string>
     <string name="cf_symmetry_0">Sínus-samhverfa</string>
     <string name="cf_symmetry_1">Kósínus-samhverfa</string>

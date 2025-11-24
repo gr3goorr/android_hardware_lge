@@ -7,9 +7,10 @@
     <string name="cf_shape_1">Iscurrimentu lentu</string>
     <string name="cf_shape_2">Fase mìnima de s\'iscurrimentu lestru</string>
     <string name="cf_shape_3">Fase mìnima de s\'iscurrimentu lentu</string>
-    <string name="cf_shape_4">Apodizatzione de s\'iscurrimentu lestru</string>
-    <string name="cf_shape_5">Iscurrimentu lestru ìbridu</string>
-    <string name="cf_shape_6">Filtru retangulare ideale</string>
+    <string name="cf_shape_4">Apodizatzione de s\'iscurrimentu lestru 1</string>
+    <string name="cf_shape_5">Apodizatzione de s\'iscurrimentu lestru 2</string>
+    <string name="cf_shape_6">Iscurrimentu lestru ìbridu</string>
+    <string name="cf_shape_7">Filtru retangulare ideale</string>
     <string name="cf_symmetry">Simmetria de su filtru personalizadu</string>
     <string name="cf_symmetry_0">Simmetria sinus</string>
     <string name="cf_symmetry_1">Simmetria cosinus</string>

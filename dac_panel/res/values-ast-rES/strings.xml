@@ -20,7 +20,8 @@
     <string name="customizable_filter_settings">Configuración del filtru personalizable</string>
     <string name="cf_shape_0">Graves amenorgaos con rapideza</string>
     <string name="cf_shape_1">Graves amenorgaos con lentitú</string>
-    <string name="cf_shape_4">Apodización de los graves amenorgaos con rapideza</string>
+    <string name="cf_shape_4">Apodización de los graves amenorgaos con rapideza 1</string>
+    <string name="cf_shape_5">Apodización de los graves amenorgaos con rapideza 2</string>
     <string name="cf_shape_6">Muria de lladriyos</string>
     <string name="cf_symmetry_0">Simetría del senu</string>
     <string name="cf_symmetry_1">Simetría del cosenu</string>

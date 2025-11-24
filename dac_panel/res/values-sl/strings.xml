@@ -25,9 +25,10 @@
     <string name="cf_shape_1">Počasen odvoj</string>
     <string name="cf_shape_2">Najmanjša faza hiter odvoj</string>
     <string name="cf_shape_3">Najmanjša faza počasni odvoj</string>
-    <string name="cf_shape_4">Apodizacija hiter odvoj</string>
-    <string name="cf_shape_5">Hibridno hiter odvoj</string>
-    <string name="cf_shape_6">Opečnati zid</string>
+    <string name="cf_shape_4">Apodizacija hiter odvoj 1</string>
+    <string name="cf_shape_5">Apodizacija hiter odvoj 2</string>
+    <string name="cf_shape_6">Hibridno hiter odvoj</string>
+    <string name="cf_shape_7">Opečnati zid</string>
     <string name="cf_symmetry">Simetrija filtra po meri</string>
     <string name="cf_symmetry_0">Sinusna simetrija</string>
     <string name="cf_symmetry_1">Kosinusna simetrija</string>

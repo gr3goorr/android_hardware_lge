@@ -25,9 +25,10 @@
     <string name="cf_shape_1">Slow roll-off</string>
     <string name="cf_shape_2">Minimum phase fast roll-off</string>
     <string name="cf_shape_3">Minimum phase slow roll-off</string>
-    <string name="cf_shape_4">Apodizing fast roll-off</string>
-    <string name="cf_shape_5">Hybrid fast roll-off</string>
-    <string name="cf_shape_6">Brick wall</string>
+    <string name="cf_shape_4">Apodizing fast roll-off 1</string>
+    <string name="cf_shape_5">Apodizing fast roll-off 2</string>
+    <string name="cf_shape_6">Hybrid fast roll-off</string>
+    <string name="cf_shape_7">Brick wall</string>
     <string name="cf_symmetry">Symetria własnego filtra</string>
     <string name="cf_symmetry_0">Symetria sinusa</string>
     <string name="cf_symmetry_1">Symetria cosinusa</string>

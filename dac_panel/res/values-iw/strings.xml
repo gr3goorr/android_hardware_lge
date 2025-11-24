@@ -25,9 +25,10 @@
     <string name="cf_shape_1">הנחתה איטית</string>
     <string name="cf_shape_2">הנחתה מהירה עם מופע מינימלי</string>
     <string name="cf_shape_3">הנחתה איטית עם מופע מינימלי</string>
-    <string name="cf_shape_4">הנחתה Apodizing מהירה</string>
-    <string name="cf_shape_5">הנחתה היברידית מהירה</string>
-    <string name="cf_shape_6">חומת לבנים</string>
+    <string name="cf_shape_4">הנחתה Apodizing מהירה 1</string>
+    <string name="cf_shape_5">הנחתה Apodizing מהירה 2</string>
+    <string name="cf_shape_6">הנחתה היברידית מהירה</string>
+    <string name="cf_shape_7">חומת לבנים</string>
     <string name="cf_symmetry">סימטריית סינון מותאמת אישית</string>
     <string name="cf_symmetry_0">סימטריית סינוס</string>
     <string name="cf_symmetry_1">סימטריית קוסינוס</string>

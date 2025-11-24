@@ -25,9 +25,10 @@
     <string name="cf_shape_1">Медленный спад</string>
     <string name="cf_shape_2">Минимальный быстрый спад фазы</string>
     <string name="cf_shape_3">Минимальный медленный спад фазы</string>
-    <string name="cf_shape_4">Аподизирующий фильтр с быстрым спадом</string>
-    <string name="cf_shape_5">Гибридный быстрый спад</string>
-    <string name="cf_shape_6">Кирпичная стена</string>
+    <string name="cf_shape_4">Аподизирующий фильтр с быстрым спадом 1</string>
+    <string name="cf_shape_5">Аподизирующий фильтр с быстрым спадом 2</string>
+    <string name="cf_shape_6">Гибридный быстрый спад</string>
+    <string name="cf_shape_7">Кирпичная стена</string>
     <string name="cf_symmetry">Симметрия пользовательского фильтра</string>
     <string name="cf_symmetry_0">Симметрия синуса</string>
     <string name="cf_symmetry_1">Симмутрия косинуса</string>

@@ -25,9 +25,10 @@
     <string name="cf_shape_1">慢速衰減</string>
     <string name="cf_shape_2">最小相位快速衰減</string>
     <string name="cf_shape_3">最小相位慢速衰減</string>
-    <string name="cf_shape_4">帶有快速衰減的抗混疊</string>
-    <string name="cf_shape_5">混合快速衰減</string>
-    <string name="cf_shape_6">磚牆</string>
+    <string name="cf_shape_4">帶有快速衰減的抗混疊1</string>
+    <string name="cf_shape_5">帶有快速衰減的抗混疊2</string>
+    <string name="cf_shape_6">混合快速衰減</string>
+    <string name="cf_shape_7">磚牆</string>
     <string name="cf_symmetry">自定義篩選對稱性</string>
     <string name="cf_symmetry_0">正弦對稱</string>
     <string name="cf_symmetry_1">餘弦對稱</string>
