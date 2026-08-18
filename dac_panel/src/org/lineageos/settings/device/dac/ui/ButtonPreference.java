@@ -7,6 +7,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceViewHolder;
 import android.widget.TextView;
@@ -57,9 +58,16 @@ public class ButtonPreference extends Preference {
 
     private void resetCoefficients()
     {
+        boolean success;
         try {
-            QuadDAC.resetCustomFilterCoeffs();
-        } catch (Exception e) {}
+            success = QuadDAC.resetCustomFilterCoeffs();
+        } catch (Exception e) {
+            success = false;
+        }
+        if (!success) {
+            Toast.makeText(getContext(), R.string.failed_to_apply_setting, Toast.LENGTH_SHORT).show();
+            return;
+        }
         for(int i = 0; i < 14; i++) {
             QuadDACPanelFragment.setCoeffSummary(i, 0);
         }

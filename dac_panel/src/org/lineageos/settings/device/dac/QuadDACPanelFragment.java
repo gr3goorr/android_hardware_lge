@@ -18,6 +18,7 @@ import androidx.preference.SeekBarPreference;
 
 import android.util.Log;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import org.lineageos.settings.device.dac.ui.BalancePreference;
 import org.lineageos.settings.device.dac.ui.ButtonPreference;
@@ -82,11 +83,17 @@ public class QuadDACPanelFragment extends PreferenceFragment
                 boolean set_dac_on = (boolean) newValue;
 
                 if (set_dac_on) {
-                    DacControlInterface.enable();
+                    if (!DacControlInterface.enable()) {
+                        showApplyFailureToast();
+                        return false;
+                    }
                     enableExtraSettings();
                     return true;
                 } else {
-                    DacControlInterface.disable();
+                    if (!DacControlInterface.disable()) {
+                        showApplyFailureToast();
+                        return false;
+                    }
                     disableExtraSettings();
                     return true;
                 }
@@ -96,14 +103,20 @@ public class QuadDACPanelFragment extends PreferenceFragment
                     ListPreference lp = (ListPreference) preference;
 
                     int mode = lp.findIndexOfValue((String) newValue);
-                    DacControlInterface.setDACMode(mode);
+                    if (!DacControlInterface.setDACMode(mode)) {
+                        showApplyFailureToast();
+                        return false;
+                    }
                     return true;
 
                 } else if (preference.getKey().equals(Constants.DIGITAL_FILTER_KEY)) {
                     ListPreference lp = (ListPreference) preference;
 
                     int digital_filter = lp.findIndexOfValue((String) newValue);
-                    DacControlInterface.setDigitalFilter(digital_filter);
+                    if (!DacControlInterface.setDigitalFilter(digital_filter)) {
+                        showApplyFailureToast();
+                        return false;
+                    }
 
                     /* Custom filter panel should only show up with Filter [3] (fourth one) selected */
                     if(DacControlInterface.getSupportedFeatures().contains(Feature.CustomFilter) && digital_filter == 3)
@@ -117,14 +130,20 @@ public class QuadDACPanelFragment extends PreferenceFragment
                     ListPreference lp = (ListPreference) preference;
 
                     int sound_preset = lp.findIndexOfValue((String) newValue);
-                    DacControlInterface.setSoundPreset(sound_preset);
+                    if (!DacControlInterface.setSoundPreset(sound_preset)) {
+                        showApplyFailureToast();
+                        return false;
+                    }
                     return true;
                 } else if(preference.getKey().equals(Constants.CUSTOM_FILTER_SHAPE_KEY))
                 {
                     ListPreference lp = (ListPreference) preference;
 
                     int filter_shape = lp.findIndexOfValue((String) newValue);
-                    DacControlInterface.setCustomFilterShape(filter_shape);
+                    if (!DacControlInterface.setCustomFilterShape(filter_shape)) {
+                        showApplyFailureToast();
+                        return false;
+                    }
                     return true;
 
                 } else if(preference.getKey().equals(Constants.CUSTOM_FILTER_SYMMETRY_KEY))
@@ -132,7 +151,10 @@ public class QuadDACPanelFragment extends PreferenceFragment
                     ListPreference lp = (ListPreference) preference;
 
                     int filter_symmetry = lp.findIndexOfValue((String) newValue);
-                    DacControlInterface.setCustomFilterSymmetry(filter_symmetry);
+                    if (!DacControlInterface.setCustomFilterSymmetry(filter_symmetry)) {
+                        showApplyFailureToast();
+                        return false;
+                    }
                     return true;
 
                 }
@@ -146,7 +168,10 @@ public class QuadDACPanelFragment extends PreferenceFragment
 
                         //avc_volume.setSummary( ((double)avc_vol) + " db");
 
-                        DacControlInterface.setAVCVolume(avc_vol);
+                        if (!DacControlInterface.setAVCVolume(avc_vol)) {
+                            showApplyFailureToast();
+                            return false;
+                        }
                         return true;
                     } else {
                         return false;
@@ -159,9 +184,12 @@ public class QuadDACPanelFragment extends PreferenceFragment
                             if (newValue instanceof Integer) {
                                 Integer coeffVal = (Integer) newValue;
 
-                                setCoeffSummary(i, coeffVal);
+                                if (!DacControlInterface.setCustomFilterCoeff(i, coeffVal)) {
+                                    showApplyFailureToast();
+                                    return false;
+                                }
 
-                                DacControlInterface.setCustomFilterCoeff(i, coeffVal);
+                                setCoeffSummary(i, coeffVal);
                                 return true;
                             } else
                                 return false;
@@ -171,8 +199,13 @@ public class QuadDACPanelFragment extends PreferenceFragment
             }
         } catch (Exception e) {
             Log.d(TAG, "onPreferenceChange: " + e.toString());
+            showApplyFailureToast();
         }
         return false;
+    }
+
+    private void showApplyFailureToast() {
+        Toast.makeText(getContext(), R.string.failed_to_apply_setting, Toast.LENGTH_SHORT).show();
     }
 
     @Override

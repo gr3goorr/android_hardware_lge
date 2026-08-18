@@ -1,6 +1,8 @@
 <resources>
     <string name="summary_empty" translatable="false"></string>
 
+    <string name="failed_to_apply_setting">Failed to apply setting</string>
+
     <string name="quad_dac_app_name">Quad DAC Panel</string>
 
     <string name="quad_dac">Hi-Fi Quad DAC</string>

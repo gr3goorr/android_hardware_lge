@@ -28,26 +28,26 @@ public class QuadDAC {
         dac_service_available = true;
     }
 
-    public static void enable() throws RemoteException
+    public static boolean enable() throws RemoteException
     {
         try {
-            dac.setHifiDacState(true);
+            boolean success = dac.setHifiDacState(true);
 
             int mode = getDACMode();
             int left_balance = getLeftBalance();
             int right_balance = getRightBalance();
             int avc_vol = getAVCVolume();
             int digital_filter = getDigitalFilter();
-            setDACMode(mode);
-            setLeftBalance(left_balance);
-            setRightBalance(right_balance);
-            setAVCVolume(avc_vol);
-            setDigitalFilter(digital_filter);
+            success = setDACMode(mode) && success;
+            success = setLeftBalance(left_balance) && success;
+            success = setRightBalance(right_balance) && success;
+            success = setAVCVolume(avc_vol) && success;
+            success = setDigitalFilter(digital_filter) && success;
 
             // Sound presets are disabled on the open-source audio HAL.
             if(dac_features.contains(Feature.SoundPreset)) {
                 int sound_preset = getSoundPreset();
-                setSoundPreset(sound_preset);
+                success = setSoundPreset(sound_preset) && success;
             }
 
             // Kernel-side implementation needed for custom filters
@@ -59,18 +59,19 @@ public class QuadDAC {
                 for(i = 0; i < 14; i++) {
                     custom_filter_coefficients[i] = getCustomFilterCoeff(i);
                 }
-                setCustomFilterShape(custom_filter_shape);
-                setCustomFilterSymmetry(custom_filter_symmetry);
+                success = setCustomFilterShape(custom_filter_shape) && success;
+                success = setCustomFilterSymmetry(custom_filter_symmetry) && success;
                 for(i = 0; i < 14; i++) {
-                    setCustomFilterCoeff(i, custom_filter_coefficients[i]);
+                    success = setCustomFilterCoeff(i, custom_filter_coefficients[i]) && success;
                 }
             }
-        } catch(Exception e) {}
+            return success;
+        } catch(Exception e) { return false; }
     }
 
-    public static void disable() throws RemoteException
+    public static boolean disable() throws RemoteException
     {
-        dac.setHifiDacState(false);
+        return dac.setHifiDacState(false);
     }
 
     public static ArrayList<Integer> getSupportedFeatures() {
@@ -82,9 +83,9 @@ public class QuadDAC {
         return dac.getSupportedFeatureValues(feature);
     }
 
-    public static void setDACMode(int mode) throws RemoteException
+    public static boolean setDACMode(int mode) throws RemoteException
     {
-        dac.setFeatureValue(Feature.HifiMode, mode);
+        return dac.setFeatureValue(Feature.HifiMode, mode);
     }
 
     public static int getDACMode() throws RemoteException
@@ -92,9 +93,9 @@ public class QuadDAC {
         return dac.getFeatureValue(Feature.HifiMode);
     }
 
-    public static void setAVCVolume(int avc_volume) throws RemoteException
+    public static boolean setAVCVolume(int avc_volume) throws RemoteException
     {
-        dac.setFeatureValue(Feature.AVCVolume, avc_volume);
+        return dac.setFeatureValue(Feature.AVCVolume, avc_volume);
     }
 
     public static int getAVCVolume() throws RemoteException
@@ -102,17 +103,18 @@ public class QuadDAC {
         return dac.getFeatureValue(Feature.AVCVolume);
     }
 
-    public static void setDigitalFilter(int filter) throws RemoteException
+    public static boolean setDigitalFilter(int filter) throws RemoteException
     {
-        dac.setFeatureValue(Feature.DigitalFilter, filter);
+        boolean success = dac.setFeatureValue(Feature.DigitalFilter, filter);
         if(dac_features.contains(Feature.CustomFilter) && filter == 3) {/* Custom filter */
             /*
             * If it's a custom filter, we need to apply its settings. Any of the functions
             * below should suffice since it'll load all settings from memory by parsing its
             * data.
             */
-            setCustomFilterShape(getCustomFilterShape());
+            success = setCustomFilterShape(getCustomFilterShape()) && success;
         }
+        return success;
     }
 
     public static int getDigitalFilter() throws RemoteException
@@ -120,10 +122,11 @@ public class QuadDAC {
         return dac.getFeatureValue(Feature.DigitalFilter);
     }
 
-    public static void setSoundPreset(int preset) throws RemoteException
+    public static boolean setSoundPreset(int preset) throws RemoteException
     {
         if(dac_features.contains(Feature.SoundPreset))
-            dac.setFeatureValue(Feature.SoundPreset, preset);
+            return dac.setFeatureValue(Feature.SoundPreset, preset);
+        return false;
     }
 
     public static int getSoundPreset() throws RemoteException
@@ -133,9 +136,9 @@ public class QuadDAC {
         return dac.getFeatureValue(Feature.SoundPreset);
     }
 
-    public static void setLeftBalance(int balance) throws RemoteException
+    public static boolean setLeftBalance(int balance) throws RemoteException
     {
-        dac.setFeatureValue(Feature.BalanceLeft, balance);
+        return dac.setFeatureValue(Feature.BalanceLeft, balance);
     }
 
     public static int getLeftBalance() throws RemoteException
@@ -143,9 +146,9 @@ public class QuadDAC {
         return dac.getFeatureValue(Feature.BalanceLeft);
     }
 
-    public static void setRightBalance(int balance) throws RemoteException
+    public static boolean setRightBalance(int balance) throws RemoteException
     {
-        dac.setFeatureValue(Feature.BalanceRight, balance);
+        return dac.setFeatureValue(Feature.BalanceRight, balance);
     }
 
     public static int getRightBalance() throws RemoteException
@@ -188,8 +191,8 @@ public class QuadDAC {
         return dac.getCustomFilterCoeff(coeffIndex);
     }
 
-    public static void resetCustomFilterCoeffs() throws RemoteException
+    public static boolean resetCustomFilterCoeffs() throws RemoteException
     {
-        dac.resetCustomFilterCoeffs();
+        return dac.resetCustomFilterCoeffs();
     }
 }
