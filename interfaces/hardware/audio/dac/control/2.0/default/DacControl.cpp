@@ -62,9 +62,18 @@ static std::vector<KeyValue> hifi_modes = {{"Normal", "0"},
  * Write value to path and close file.
  */
 template <typename T>
-static void set(const std::string& path, const T& value) {
+static bool set(const std::string& path, const T& value) {
     std::ofstream file(path);
+    if (!file.is_open()) {
+        LOG(ERROR) << "DacControl: failed to open " << path;
+        return false;
+    }
     file << value;
+    if (!file.good()) {
+        LOG(ERROR) << "DacControl: failed to write " << path;
+        return false;
+    }
+    return true;
 }
 
 DacControl::DacControl() {
@@ -266,13 +275,15 @@ end:
 }
 
 bool DacControl::writeAvcVolumeState(int32_t value) {
-    set(avcPath, (-1)*value); //we save it as the actual value, while the kernel requires a positive value
-    return (bool)property_set(PROPERTY_HIFI_DAC_AVC_VOLUME, std::to_string(value).c_str());
+    if (!set(avcPath, (-1)*value)) //we save it as the actual value, while the kernel requires a positive value
+        return false;
+    return (property_set(PROPERTY_HIFI_DAC_AVC_VOLUME, std::to_string(value).c_str()) == 0);
 }
 
 bool DacControl::writeHifiModeState(int32_t value) {
-    set(hifiPath, value);
-    return (bool)property_set(PROPERTY_HIFI_DAC_MODE, std::to_string(value).c_str());
+    if (!set(hifiPath, value))
+        return false;
+    return (property_set(PROPERTY_HIFI_DAC_MODE, std::to_string(value).c_str()) == 0);
 }
 
 bool DacControl::setAudioHALParameters(KeyValue kv) {
@@ -316,37 +327,39 @@ Return<bool> DacControl::setHifiDacState(bool enable) {
 }
 
 bool DacControl::setDigitalFilterState(int32_t value) {
+    bool rc;
     switch(value) {
         case 0: // Short
-            set(essFilterPath, 9);
+            rc = set(essFilterPath, 9);
             break;
         case 1: // Sharp
-            set(essFilterPath, 4);
+            rc = set(essFilterPath, 4);
             break;
         case 2: // Slow
-            set(essFilterPath, 5);
+            rc = set(essFilterPath, 5);
             break;
         case 3: // Custom
-            set(essFilterPath, 3);
+            rc = set(essFilterPath, 3);
             break;
         default:
             LOG(ERROR) << "DacControl::setDigitalFilterState: Invalid filter " << value;
             return false;
     }
-    property_set(PROPERTY_DIGITAL_FILTER, std::to_string(value).c_str());
-    return true;
+    if (!rc)
+        return false;
+    return (property_set(PROPERTY_DIGITAL_FILTER, std::to_string(value).c_str()) == 0);
 }
 
 bool DacControl::setVolumeBalance(Feature direction, int32_t value) {
     switch(direction) {
         case Feature::BalanceLeft:
-            set(volumeLeftPath, value);
-            property_set(PROPERTY_LEFT_BALANCE, std::to_string(value).c_str());
-            return true;
+            if (!set(volumeLeftPath, value))
+                return false;
+            return (property_set(PROPERTY_LEFT_BALANCE, std::to_string(value).c_str()) == 0);
         case Feature::BalanceRight:
-            set(volumeRightPath, value);
-            property_set(PROPERTY_RIGHT_BALANCE, std::to_string(value).c_str());
-            return true;
+            if (!set(volumeRightPath, value))
+                return false;
+            return (property_set(PROPERTY_RIGHT_BALANCE, std::to_string(value).c_str()) == 0);
         default:
             return false;
     }
@@ -494,7 +507,8 @@ Return<bool> DacControl::setCustomFilterShape(int32_t shape) {
         LOG(ERROR) << "DacControl::setCustomFilterShape: failed to set property " << PROPERTY_CUSTOM_FILTER_SHAPE << " with error " << rc;
         return false;
     }
-    set(customFilterPath, parseUpdatedCustomFilterData());
+    if (!set(customFilterPath, parseUpdatedCustomFilterData()))
+        return false;
     return true;
 }
 
@@ -509,7 +523,8 @@ Return<bool> DacControl::setCustomFilterSymmetry(int symmetry) {
         LOG(ERROR) << "DacControl::setCustomFilterSymmetry: failed to set property " << PROPERTY_CUSTOM_FILTER_SYMMETRY << " with error " << rc;
         return false;
     }
-    set(customFilterPath, parseUpdatedCustomFilterData());
+    if (!set(customFilterPath, parseUpdatedCustomFilterData()))
+        return false;
     return true;
 }
 
@@ -524,7 +539,8 @@ Return<bool> DacControl::setCustomFilterCoeff(int coeffIndex, int value) {
         LOG(ERROR) << "DacControl::setCustomFilterCoeff: failed to set property " << PROPERTY_CUSTOM_FILTER_COEFFS.at(coeffIndex) << " with error " << rc;
         return false;
     }
-    set(customFilterPath, parseUpdatedCustomFilterData());
+    if (!set(customFilterPath, parseUpdatedCustomFilterData()))
+        return false;
     return true;
 }
 
@@ -543,7 +559,8 @@ Return<bool> DacControl::resetCustomFilterCoeffs() {
             return false;
         }
     }
-    set(customFilterPath, parseUpdatedCustomFilterData());
+    if (!set(customFilterPath, parseUpdatedCustomFilterData()))
+        return false;
 
     return true;
 }
