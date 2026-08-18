@@ -36,6 +36,17 @@
                 android:value="@string/summary_empty" />
         </activity>
 
+        <!--
+            Settings search results target the QuadDACPanelFragment component
+            (QuadDACPanelSearchIndexablesProvider contract). Resolve it here so
+            search result clicks actually open the panel, keeping the provider
+            and its indexing XML untouched.
+        -->
+        <activity-alias
+            android:name=".QuadDACPanelFragment"
+            android:targetActivity=".QuadDACPanelActivity"
+            android:exported="true" />
+
         <service
             android:name=".QuadDACTileService"
             android:icon="@drawable/ic_quad_dac_icon"

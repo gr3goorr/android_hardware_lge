@@ -60,4 +60,9 @@
     <string name="avc_volume">AVC Volume</string>
     <string name="avc_volume_summary">Amplifies volume</string>
 
+    <string name="avc_value_db" translatable="false">%1$d db</string>
+    <string name="cf_reset" translatable="false">Reset coefficients</string>
+    <string name="cf_coeff_label" translatable="false">Coefficient %1$d : %2$s</string>
+    <string name="balance_value_db" translatable="false">%1$.1f db</string>
+
 </resources>

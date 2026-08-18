@@ -19,7 +19,11 @@ android_app {
     defaults: [
         "SettingsLibDefaults",
     ],
-    srcs: ["src/**/*.java"],
+    srcs: [
+        "src/**/*.java",
+        "src/**/*.kt",
+    ],
+    kotlincflags: ["-Xjvm-default=all"],
     resource_dirs: ["res"],
     certificate: "platform",
     privileged: true,
@@ -29,7 +33,16 @@ android_app {
     static_libs: [
         "vendor.lge.hardware.audio.dac.control-V2.0-java",
         "androidx.core_core",
-        "androidx.preference_preference",
+        "androidx.activity_activity-compose",
+        "androidx.compose.runtime_runtime",
+        "androidx.compose.ui_ui",
+        "androidx.compose.foundation_foundation",
+        "androidx.compose.material3_material3",
+        "androidx.compose.material_material-icons-extended",
+        "androidx.lifecycle_lifecycle-viewmodel-compose",
+        "androidx.lifecycle_lifecycle-viewmodel-ktx",
+        "androidx.lifecycle_lifecycle-runtime-compose",
+        "kotlinx_coroutines_android",
     ],
 
     optimize: {

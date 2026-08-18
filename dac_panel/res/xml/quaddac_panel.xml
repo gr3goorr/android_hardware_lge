@@ -1,197 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    android:title="@strings/quad_dac">
+<!--
+    Search-index-only data source: the panel UI is rendered with Jetpack Compose
+    (QuadDACPanelScreen), but Settings search indexes each row below through
+    QuadDACPanelSearchIndexablesProvider. Keep android:key and android:title in
+    sync with the Compose UI; entries/attributes use platform attrs only so the
+    androidx.preference dependency is not needed.
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:key="quaddac_panel"
+    android:title="@string/quad_dac">
 
     <SwitchPreference
-        app:key="quaddac_switch"
-        app:summaryOn="@string/quad_dac_on"
-        app:summaryOff="@string/quad_dac_off"
-        app:title="@string/quad_dac"
-        app:isPreferenceVisible="false" />
+        android:key="quaddac_switch"
+        android:title="@string/quad_dac"
+        android:summary="@string/quad_dac_on" />
 
-    <PreferenceCategory
-        app:title="@string/quad_dac_settings" >
+    <PreferenceCategory android:title="@string/quad_dac_settings">
 
         <ListPreference
-            app:key="hifi_mode_dropdown"
-            app:title="@string/hifi_mode"
-            app:summary="%s"
-            app:entries="@array/hifi_mode_entry_values"
-            app:entryValues="@array/hifi_mode_entry_values"
-            app:isPreferenceVisible="false" />
+            android:key="hifi_mode_dropdown"
+            android:title="@string/hifi_mode"
+            android:entries="@array/hifi_mode_entry_values" />
 
         <SeekBarPreference
-            app:key="avc_volume_seekbar"
-            app:title="@string/avc_volume"
-            app:summary="@string/avc_volume_summary"
-            app:showSeekBarValue="true"
-            app:min="-24"
-            android:max="0"
-            app:defaultValue="-14"
-            app:isPreferenceVisible="false" />
+            android:key="avc_volume_seekbar"
+            android:title="@string/avc_volume"
+            android:summary="@string/avc_volume_summary" />
 
         <ListPreference
-            app:key="sound_preset_dropdown"
-            app:title="@string/sound_preset"
-            app:summary="%s"
-            app:entries="@array/sound_preset_entry_values"
-            app:entryValues="@array/sound_preset_entry_values"
-            app:isPreferenceVisible="false" />
+            android:key="sound_preset_dropdown"
+            android:title="@string/sound_preset"
+            android:entries="@array/sound_preset_entry_values" />
 
         <ListPreference
-            app:key="digital_filter_dropdown"
-            app:title="@string/digital_filter"
-            app:summary="%s"
-            app:entries="@array/digital_filter_entry_values"
-            app:entryValues="@array/digital_filter_entry_values"
-            app:isPreferenceVisible="false" />
+            android:key="digital_filter_dropdown"
+            android:title="@string/digital_filter"
+            android:entries="@array/digital_filter_entry_values" />
 
     </PreferenceCategory>
 
-    <!-- Customizable filter category -->
-    <PreferenceCategory
-        app:title="@string/customizable_filter_settings">
+    <PreferenceCategory android:title="@string/customizable_filter_settings">
 
         <ListPreference
-            app:key="custom_filter_shape"
-            app:title="@string/cf_shape"
-            app:summary="%s"
-            app:entries="@array/custom_filter_shapes"
-            app:entryValues="@array/custom_filter_shapes" />
+            android:key="custom_filter_shape"
+            android:title="@string/cf_shape"
+            android:entries="@array/custom_filter_shapes" />
 
         <ListPreference
-            app:key="custom_filter_symmetry"
-            app:title="@string/cf_symmetry"
-            app:summary="%s"
-            app:entries="@array/custom_filter_symmetries"
-            app:entryValues="@array/custom_filter_symmetries" />
+            android:key="custom_filter_symmetry"
+            android:title="@string/cf_symmetry"
+            android:entries="@array/custom_filter_symmetries" />
 
     </PreferenceCategory>
 
-    <!-- These ones really need their own category to keep things more organized -->
     <PreferenceCategory
-        app:title="@string/customizable_filter_coeffs"
-        app:summary="@string/customizable_filter_coeffs_summary">
+        android:title="@string/customizable_filter_coeffs"
+        android:summary="@string/customizable_filter_coeffs_summary">
 
-        <!-- Tons of coefficient seekbars BEGIN -->
+        <!-- Index titles are literals: the search indexer cannot format args -->
         <SeekBarPreference
-            app:key="custom_filter_coeff0"
-            app:title=""
-            app:summary="%s"
-            app:min="-9999999"
-            android:max="9999999"
-            app:defaultValue="0" />
+            android:key="custom_filter_coeff0"
+            android:title="Coefficient 0" />
         <SeekBarPreference
-            app:key="custom_filter_coeff1"
-            app:title=""
-            app:summary="%s"
-            app:min="-9999999"
-            android:max="9999999"
-            app:defaultValue="0" />
+            android:key="custom_filter_coeff1"
+            android:title="Coefficient 1" />
         <SeekBarPreference
-            app:key="custom_filter_coeff2"
-            app:title=""
-            app:summary="%s"
-            app:min="-9999999"
-            android:max="9999999"
-            app:defaultValue="0" />
+            android:key="custom_filter_coeff2"
+            android:title="Coefficient 2" />
         <SeekBarPreference
-            app:key="custom_filter_coeff3"
-            app:title=""
-            app:summary="%s"
-            app:min="-9999999"
-            android:max="9999999"
-            app:defaultValue="0" />
+            android:key="custom_filter_coeff3"
+            android:title="Coefficient 3" />
         <SeekBarPreference
-            app:key="custom_filter_coeff4"
-            app:title=""
-            app:summary="%s"
-            app:min="-9999999"
-            android:max="9999999"
-            app:defaultValue="0" />
+            android:key="custom_filter_coeff4"
+            android:title="Coefficient 4" />
         <SeekBarPreference
-            app:key="custom_filter_coeff5"
-            app:title=""
-            app:summary="%s"
-            app:min="-9999999"
-            android:max="9999999"
-            app:defaultValue="0" />
+            android:key="custom_filter_coeff5"
+            android:title="Coefficient 5" />
         <SeekBarPreference
-            app:key="custom_filter_coeff6"
-            app:title=""
-            app:summary="%s"
-            app:min="-9999999"
-            android:max="9999999"
-            app:defaultValue="0" />
+            android:key="custom_filter_coeff6"
+            android:title="Coefficient 6" />
         <SeekBarPreference
-            app:key="custom_filter_coeff7"
-            app:title=""
-            app:summary="%s"
-            app:min="-9999999"
-            android:max="9999999"
-            app:defaultValue="0" />
+            android:key="custom_filter_coeff7"
+            android:title="Coefficient 7" />
         <SeekBarPreference
-            app:key="custom_filter_coeff8"
-            app:title=""
-            app:summary="%s"
-            app:min="-9999999"
-            android:max="9999999"
-            app:defaultValue="0" />
+            android:key="custom_filter_coeff8"
+            android:title="Coefficient 8" />
         <SeekBarPreference
-            app:key="custom_filter_coeff9"
-            app:title=""
-            app:summary="%s"
-            app:min="-9999999"
-            android:max="9999999"
-            app:defaultValue="0" />
+            android:key="custom_filter_coeff9"
+            android:title="Coefficient 9" />
         <SeekBarPreference
-            app:key="custom_filter_coeff10"
-            app:title=""
-            app:summary="%s"
-            app:min="-9999999"
-            android:max="9999999"
-            app:defaultValue="0" />
+            android:key="custom_filter_coeff10"
+            android:title="Coefficient 10" />
         <SeekBarPreference
-            app:key="custom_filter_coeff11"
-            app:title=""
-            app:summary="%s"
-            app:min="-9999999"
-            android:max="9999999"
-            app:defaultValue="0" />
+            android:key="custom_filter_coeff11"
+            android:title="Coefficient 11" />
         <SeekBarPreference
-            app:key="custom_filter_coeff12"
-            app:title=""
-            app:summary="%s"
-            app:min="-9999999"
-            android:max="9999999"
-            app:defaultValue="0" />
+            android:key="custom_filter_coeff12"
+            android:title="Coefficient 12" />
         <SeekBarPreference
-            app:key="custom_filter_coeff13"
-            app:title=""
-            app:summary="%s"
-            app:min="-9999999"
-            android:max="9999999"
-            app:defaultValue="0" />
+            android:key="custom_filter_coeff13"
+            android:title="Coefficient 13" />
 
-        <!-- Tons of coefficient seekbars END -->
-
-        <org.lineageos.settings.device.dac.ui.ButtonPreference
+        <Preference
             android:key="reset_coefficients"
-            android:summary=""
-            android:title="" />
+            android:title="@string/cf_reset" />
 
     </PreferenceCategory>
 
-    <PreferenceCategory
-        app:title="@string/quad_dac_balance" >
+    <PreferenceCategory android:title="@string/quad_dac_balance">
 
-        <org.lineageos.settings.device.dac.ui.BalancePreference
-            app:key="balance"
-            app:summary="@string/quad_dac_balance_summary"
-            app:title=""
-            app:isPreferenceVisible="false" />
+        <Preference
+            android:key="balance"
+            android:title="@string/quad_dac_balance"
+            android:summary="@string/quad_dac_balance_summary" />
 
     </PreferenceCategory>
 
